@@ -19,14 +19,17 @@ function App() {
     <>
       <CardAdicionar adicionarTarefa={adicionarTarefa} />
 
-      {listaTarefas.map((tarefa) => (
-        <ListItem
-          textoTarefa={tarefa.textoTarefa}
-          key={tarefa.id}
-          id={tarefa.id}
-          finalizado={tarefa.finalizado}
-        />)
-      )}
+      <h2>Lista de Tarefas</h2>
+      <div>
+        {listaTarefas.map((tarefa) => (
+          <ListItem
+            textoTarefa={tarefa.textoTarefa}
+            key={tarefa.id}
+            id={tarefa.id}
+            finalizado={tarefa.finalizado}
+          />)
+        )}
+      </div>
     </>
   )
 }

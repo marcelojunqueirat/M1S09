@@ -1,3 +1,12 @@
 .cardAdicionar{
   margin-right: 10px;
 }
+
+input{
+  height: 33px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  color: #000000;
+  font-weight: 500;
+  font-size: 1em;
+}
