@@ -1,10 +1,19 @@
 import './App.css'
+import CardAdicionar from './components/CardAdicionar'
 
 function App() {
 
+  const adicionarTarefa = (texto) => {
+    if (texto == "") {
+      alert("É necessário escrever uma tarefa.")
+      return
+    }
+    alert("Criado função addTarefa")
+  }
+
   return (
     <>
-      <h1>Starting point</h1>
+      <CardAdicionar adicionarTarefa={adicionarTarefa} />
     </>
   )
 }
