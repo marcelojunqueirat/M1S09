@@ -4,6 +4,11 @@ import './style.css'
 function CardAdicionar(props) {
   const [textoTarefa, setTextoTarefa] = useState("")
 
+  const handleAdicionarTarefa = () => {
+    props.adicionarTarefa(textoTarefa)
+    setTextoTarefa("")
+  } 
+
   return (
     <>
       <input
@@ -13,7 +18,7 @@ function CardAdicionar(props) {
         value={textoTarefa}
         onChange={ (evento) => {setTextoTarefa(evento.target.value)} }
       />
-      <button onClick={() => props.adicionarTarefa(textoTarefa)} >Adicionar</button>
+      <button onClick={() => handleAdicionarTarefa()} >Adicionar</button>
     </>
   )
 }
